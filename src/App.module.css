@@ -1,0 +1,94 @@
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0 40px;
+  gap: 4px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all .2s;
+  margin-bottom: -1px;
+}
+.tab:hover { color: var(--text); }
+.tabActive { color: var(--accent) !important; border-bottom-color: var(--accent); }
+.tabIcon { font-size: 16px; }
+
+.main { flex: 1; max-width: 1200px; margin: 0 auto; width: 100%; padding: 32px 40px; }
+@media(max-width:640px){ .main{ padding: 20px 16px; } .tabs{ padding: 0 16px; } }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filterBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.filterBtn:hover { border-color: var(--border2); color: var(--text); }
+.filterActive { color: var(--text); }
+
+.filterCount {
+  background: var(--border);
+  border-radius: 10px;
+  padding: 1px 6px;
+  font-size: 9px;
+}
+
+.resultsInfo {
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.resultsInfo strong { color: var(--text); }
+
+.footer {
+  margin-top: auto;
+  padding: 16px 40px;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.7;
+  letter-spacing: .5px;
+}
+.footer strong { color: var(--border2); }
+
+.meta {
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  display: flex;
+  gap: 8px;
+}
+.loading { color: var(--accent); animation: pulse 1s ease infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }

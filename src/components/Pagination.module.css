@@ -1,0 +1,27 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 8px 14px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .15s;
+  min-width: 36px;
+}
+.btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.btn:disabled { opacity: .3; cursor: not-allowed; }
+.active { border-color: var(--accent) !important; color: var(--accent) !important; background: rgba(0,207,168,0.08) !important; }
+
+.ellipsis { color: var(--muted); padding: 0 4px; }
