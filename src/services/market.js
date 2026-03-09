@@ -1,6 +1,6 @@
 // ⚠️ Dopo il deploy su Vercel, sostituisci con il tuo URL reale
 // Es: https://signal-backend-carlo.vercel.app
-export const BACKEND_URL = 'https://signal-backend-p7euwt1ka-carlo120686s-projects.vercel.app'
+export const BACKEND_URL = 'https://signal-backend-theta.vercel.app'
 
 export async function fetchQuote(symbol) {
   try {
